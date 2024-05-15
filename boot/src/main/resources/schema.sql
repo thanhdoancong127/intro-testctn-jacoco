@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS "user";
+CREATE TABLE "user" (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    body VARCHAR(255),
+    version INT
+);
