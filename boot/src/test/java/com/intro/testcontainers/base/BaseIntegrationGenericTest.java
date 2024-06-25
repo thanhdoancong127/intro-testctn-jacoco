@@ -13,11 +13,10 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
 @Testcontainers
+// Don’t hardcode the hostname
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @DirtiesContext
-// @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)
-public abstract class BaseIntegrationTest {
-
+public abstract class BaseIntegrationGenericTest {
     @Autowired
 	protected TestRestTemplate testRestTemplate ;
 
